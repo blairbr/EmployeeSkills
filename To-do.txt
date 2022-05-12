@@ -1,0 +1,1 @@
+1. Change database columns to nonnullable for fields like ID, etc

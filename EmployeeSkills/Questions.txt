@@ -1,0 +1,13 @@
+﻿Questions - 
+
+1. When do you use a class library?
+2. Why does .NET 6 add access modifiers to the class level?
+3. Why are fields with getters and setters public?
+4. How do I set up the git ignore file to ignore this questions.txt and DB files like sqllite?
+5. How to remember which goes first in constructor, _ or ?
+6. Why IEnumerable over List? and should you ever use list? when?
+7. What is the Case convention in Domain classes? Field Field - what's normally done there?
+8. Difference between QuerySingleAsync and QueryAsync? (error handling??)
+9. How to create and insert a GUID as the ID?
+10. What's up with nullable field error message on the domain objects?
+11. Nchar versus NVarChar? 
