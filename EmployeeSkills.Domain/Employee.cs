@@ -12,7 +12,7 @@
         public string HiredDate { get; set; }
         public string Role { get; set; } // default = Technical Consultant
         public string BusinessUnit { get; set; }
-        public List<Skill> Skills { get; set; } 
+        public List<Skill> Skills { get; set; } //better as list than IEnum?
         public string AssignedTo { get; set; } //look at swagger again for this
     }
 }

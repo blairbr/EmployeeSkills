@@ -1,5 +1,6 @@
 ﻿using EmployeeSkills.Domain;
 using EmployeeSkills.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,7 @@ namespace EmployeeSkills.Controllers
 
 
         [HttpGet]
+        [EnableCors("_myAllowSpecificOrigins")]
         public async Task<IActionResult> GetEmployeesAsync()
         {
             var returnedEmployees = await employeeService.GetEmployeesAsync();
@@ -24,6 +26,7 @@ namespace EmployeeSkills.Controllers
         }
 
         [HttpPost]
+        [EnableCors("_myAllowSpecificOrigins")]
         public async Task<IActionResult> AddEmployeeAsync([FromBody]Employee employee)
         {
             var addedEmployee = await employeeService.AddEmployeeAsync(employee);

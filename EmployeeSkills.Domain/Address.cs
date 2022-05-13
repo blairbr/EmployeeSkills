@@ -15,5 +15,6 @@ namespace EmployeeSkills.Domain
         public string Region { get; set; }
         public string Postal { get; set; }
         public string Country { get; set; }
+ //       public string EmployeeId { get; set; }
     }
 }

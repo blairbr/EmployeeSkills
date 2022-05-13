@@ -12,5 +12,8 @@ namespace EmployeeSkills.Domain
         public Field field { get; set; }
         public int Experience { get; set; }
         public string summary { get; set; }
+
+  //      public List<string> EmployeeId { get; set; }
+
     }
 }
