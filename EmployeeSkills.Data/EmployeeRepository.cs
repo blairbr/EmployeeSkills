@@ -10,9 +10,9 @@ namespace EmployeeSkills.Data
         private const string connectionString = "Data Source = (LocalDb)\\MSSQLLocalDB; Initial Catalog = EmployeeSkills; Integrated Security = True;";
         private const string selectAllEmployeesStatement = "SELECT * FROM Employees";
         private const string addEmployeeStatement =
-            @"INSERT INTO Employees (FirstName, LastName) 
-              OUTPUT INSERTED.[FirstName], INSERTED.[LastName]
-              VALUES @FirstName, @LastName";
+            @"INSERT INTO Employees (Id, FirstName, LastName, ContactEmail, CompanyEmail, BirthDate, HiredDate, Role, BusinessUnit) 
+              OUTPUT INSERTED.[Id], INSERTED.[FirstName], INSERTED.[LastName], INSERTED.[ContactEmail], INSERTED.[CompanyEmail], INSERTED.[BirthDate], INSERTED.[HiredDate], INSERTED.[Role], INSERTED.[BusinessUnit]
+              VALUES @Id, @FirstName, @LastName, @ContactEmail, @CompanyEmail, @BirthDate, @HiredDate, @Role, @BusinessUnit) ";
         public async Task<IEnumerable<Employee>> GetEmployeesAsync()
         {
             using (var connection = new SqlConnection(connectionString))

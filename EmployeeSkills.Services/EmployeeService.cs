@@ -19,7 +19,7 @@ namespace EmployeeSkills.Services
 
         public async Task<Employee> AddEmployeeAsync(Employee employee)
         {
-            employee.Id = Guid.NewGuid().ToString();
+           // employee.Id = Guid.NewGuid().ToString();
             var addedEmployee = await employeeRepository.AddEmployeeAsync(employee);
             return addedEmployee;
         }
