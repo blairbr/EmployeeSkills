@@ -12,7 +12,7 @@ namespace EmployeeSkills.Data
         private const string addEmployeeStatement =
             @"INSERT INTO Employees (Id, FirstName, LastName, ContactEmail, CompanyEmail, BirthDate, HiredDate, Role, BusinessUnit) 
               OUTPUT INSERTED.[Id], INSERTED.[FirstName], INSERTED.[LastName], INSERTED.[ContactEmail], INSERTED.[CompanyEmail], INSERTED.[BirthDate], INSERTED.[HiredDate], INSERTED.[Role], INSERTED.[BusinessUnit]
-              VALUES @Id, @FirstName, @LastName, @ContactEmail, @CompanyEmail, @BirthDate, @HiredDate, @Role, @BusinessUnit) ";
+              VALUES (@Id, @FirstName, @LastName, @ContactEmail, @CompanyEmail, @BirthDate, @HiredDate, @Role, @BusinessUnit) ";
         public async Task<IEnumerable<Employee>> GetEmployeesAsync()
         {
             using (var connection = new SqlConnection(connectionString))
@@ -27,6 +27,7 @@ namespace EmployeeSkills.Data
             using (var connection = new SqlConnection(connectionString))
             {
                 var addedEmployee = await connection.QuerySingleAsync<Employee>(addEmployeeStatement, employee);
+                //To-do: edit this to add & return objects (Address, Skills, Fields)
                 return addedEmployee;
             }
         }

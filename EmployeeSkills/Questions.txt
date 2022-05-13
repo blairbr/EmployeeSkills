@@ -13,4 +13,6 @@
 11. Nchar versus NVarChar? 
 12. Where is the bad request coming from if it doesnt even hit the endpoint first? Middleware?
 13. Do I need to configure launchSettings.json "applicationUrl": "http://localhost:8080", to have a HTTPS port as well?
-14. What happened to the main method int eh startup file w .net 6? ahh i feel so lost
+14. What happened to the main method int eh startup file w .net 6? 
+15. How can you  use Chrome tools to see the address the request is coming from?
+

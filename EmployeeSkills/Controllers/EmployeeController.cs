@@ -24,9 +24,10 @@ namespace EmployeeSkills.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddEmployeeAsync(Employee employee)
+        public async Task<IActionResult> AddEmployeeAsync([FromBody]Employee employee)
         {
             var addedEmployee = await employeeService.AddEmployeeAsync(employee);
+
             return Ok(addedEmployee);
 
             //Also need check data and to return '422 - Invalid Perficient employee data sent to server.' if the request is invalid

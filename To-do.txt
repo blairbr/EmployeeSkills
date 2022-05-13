@@ -1,3 +1,4 @@
 1. Change database columns to nonnullable for fields like ID, etc
 2. error handling for bad requests, etc
 3. unit tests for bad requests, returning other status codes etc
+4. The AddEmployee endpoint needs to add Address, Skills, and Fields

@@ -9,8 +9,7 @@ namespace EmployeeSkills.Domain
     public class Field
     {
         public string Id { get; set; }
-        public Field field { get; set;  }
-        public int Experience { get; set; }
-        public string Summary { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
     }
 }

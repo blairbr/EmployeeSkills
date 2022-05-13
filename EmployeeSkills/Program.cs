@@ -12,9 +12,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:8080",
-                                              "https://localhost:8080",
-                                              "https://localhost:8080/employees");
+                          policy.WithOrigins("http://editor.swagger.io");
                       });
 });
 // Add services to the container.
